@@ -183,10 +183,31 @@
 					</div>
 					<p class="lead">For a simple tutorial we chose something that dosen't actually require any inputs, although a general rule is the more inputs you give to the BDKp library the better it can help automate things for you in the long run.</p>
 					<pre class="prettyprint">
-					&lt;?php	
-					ZOMG CODE
-					?&gt;
+&lt;?php	
+	//Ask Bitcoin to generate and return a new valid Bitcoin address to us
+	$new_address = bitcoin_generate_new_address();
+	
+	//Check if the address was successfully created
+	//(its recommended to ALWAYS do these checks every function)
+	if( $new_address["return_status"] == 1 ){
+		echo "Your deposit address is ".$new_address["new_address"];
+	}else{
+		echo "Failed to generate address, Try agian.";
+	}
+?&gt;
 					</pre>
+					<p class="lead">Now lets break the code down line by line.</p>
+					<pre class="prettyprint">$new_address = bitcoin_generate_new_address();</pre>
+					<p style="font-size:110%;">Here we are querying the Bitcoin client asking it to generate an address, the BDK library will do the connection handling and the querying of the parameters, It's so simple.</p>
+					
+					<br/><br/>
+					
+					<pre class="prettyprint">if( $new_address["return_status"] == 1 ){
+	echo "Your deposit address is ".$new_address["new_address"];
+}else{
+					</pre>
+					<p style="font-size:110%;">Before we can trust the data we get from Bitcoin we need to make sure the return code was a success! (And not an error). With the BDK the ultimate rule is if the return status is "1" (without the quotes) then the data is trust worthy, all other return statuses will need to be handled accordingly to the extent that you need it and the return status lists are available in the API Index or the Wiki Page list.
+					</p>
 				</section>
 			</div>
 		</div>
