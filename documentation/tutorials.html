@@ -26,30 +26,33 @@
 						<span class='icon-bar'></span>
 					</a>
 					
-					<a href="index.html" class="brand">Bitcoin Development Kit</a>
+					<a href="../index.html" class="brand">Bitcoin Development Kit</a>
 					<div class='nav-collapse subnav-collapse collapse pull-right' id='top-navigation'>
 						<ul class='nav'>
 						
-							<li>
-								<a href="../index.html">Home</a>
+							<li class=''>
+								<a href="../index.html">Home<i class="icon-home"></i></a>
 							</li>
-							
-							<li class='dropdown'>
-								<a href="../pricing.html">Features &amp; Pricing</a>
-							</li>
-							
 							
 							<li class='dropdown active'>
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation</a>
+								<a href="../pricing.html">Features &amp; Pricing<i class="icon-money"></i></a>
+							</li>
+							
+							
+							<li class='dropdown'>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation<i class="icon-print"></i></a>
 								<ul class='dropdown-menu'>
 									<li>
-										<a href="get_started.html">Get Started</a>
+										<a href="get_started.html"><i class="icon-book"></i>Get Started</a>
 									</li>
 									<li>
-										<a href="tutorials.html">Text &amp; Video Tutorials</a>
+										<a href="tutorials.html"><i class="icon-film"></i>Text &amp; Video Tutorials</a>
 									</li>
 									<li>
-										<a href="api.html">API Reference List</a>
+										<a href="api.html"><i class="icon-folder-close"></i>API Reference List</a>
+									</li>
+									<li>
+										<a href="faq.html"><i class="icon-question-sign"></i>FAQ</a>
 									</li>
 									
 								</ul>
@@ -57,19 +60,22 @@
 							
 							
 							<li class='dropdown'>
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us</a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<i class="icon-info-sign"></i></a>
 								<ul class='dropdown-menu'>
 									<li>
-										<a href="index.html">Goals &amp; Road map</a>
+										<a href="index.html"><i class="icon-bar-chart"></i>Goals &amp; Road map</a>
 									</li>
 									<li>
-										<a href="index.html">Blog</a>
+										<a href="index.html"><i class="icon-bullhorn"></i>Blog</a>
 									</li>
 									<li>
-										<a href="index.html">Contact Us</a>
+										<a href="index.html"><i class="icon-pencil"></i>Contact Us</a>
 									</li>
 								</ul>
 							</li>
+							
+							<li>
+								<a href="https://github.com/Xenland/Bitcoin-Development-Kit">Fork Us<i class="icon-github"></i></a>
 						</ul>
 					</div>
 				</div>
@@ -82,7 +88,7 @@
 	<header class="jumbotron subhead" id="overview">
 		<div class="container">
 		<div class="docs-header-icon">
-		<h1>Getting started</h1>
+		<h1>Text &amp; Video Tutorials</h1>
 		<p class="lead">Overview of the Bitcoin Development Kit for PHP.</p>
 		</div>
 		</div>
@@ -114,6 +120,7 @@
 					<li class="active"><a href="#prelude"><i class="icon-chevron-right"></i> Prelude to Tutorials</a></li>
 					<li><a href="#integration"><i class="icon-chevron-right"></i>Integrating the BDK library</a></li>
 					<li><a href="#bitcoin-generate-new-address"><i class="icon-chevron-right"></i>Generate New Address</a></li>
+					<li><a href="#bitcoin-validate-address"><i class="icon-chevron-right"></i>Validate Address</a></li>
 				</ul>
 			</div>
 			<div class="span9">
@@ -131,7 +138,7 @@
 						If you end up liking these tutorials, we offer a variety of low-cost packages to provide you with loads more <em>Text &amp; Video Tutorials</em> as well as <em>Simple &amp; Advanced Example Scripts</em>; Those can be found in the <a href="../pricing.html">Pricing Section</a>.
 					</p>
 					
-					<p class="lead">
+					<p>
 						 The tutorials listed here will cover the basics in generalized utilization of this library, We provide tutorials here for free to help demonstrate what you can expect from this library but please remember we do not show nearly as much details as you will receive with a one-time paid package(updates for life), which can be purchased from the <a href="../pricing.html">Pricing Section</a>.
 					</p>
 				</section>
@@ -175,11 +182,11 @@
 				</section>
 
 
-				<!-- File structure
+				<!--Generate a Bitcoin address
 				================================================== -->
 				<section id="bitcoin-generate-new-address">
 					<div class="page-header">
-					<h1>2. How to generate a new bitcoin address?</h1>
+					<h1>3. How to generate a new bitcoin address?</h1>
 					</div>
 					<p class="lead">For a simple tutorial we chose something that dosen't actually require any inputs, although a general rule is the more inputs you give to the BDKp library the better it can help automate things for you in the long run.</p>
 					<pre class="prettyprint">
@@ -208,6 +215,16 @@
 					</pre>
 					<p style="font-size:110%;">Before we can trust the data we get from Bitcoin we need to make sure the return code was a success! (And not an error). With the BDK the ultimate rule is if the return status is "1" (without the quotes) then the data is trust worthy, all other return statuses will need to be handled accordingly to the extent that you need it and the return status lists are available in the API Index or the Wiki Page list.
 					</p>
+				</section>
+				
+				
+				<!--  Verify Bitcoin address
+				================================================== -->
+				<section id="bitcoin-validate-address">
+					<div class="page-header">
+					<h1>4. How do I verify a Bitcoin address?</h1>
+					</div>
+					<p class="lead">Newly created Bitcoin addresses generated through the BDK library are already verified for their validlity, but if you want to validate an address that was generated outside the BDK library here is how you will go about doing so... </p>
 				</section>
 			</div>
 		</div>
